@@ -14,7 +14,6 @@ client.on('message', message => {
   if (message.content.startsWith(adminprefix + 'p')) {
     client.user.setGame(argresult);
     message.delete();
-     
   } else 
   if (message.content.startsWith(adminprefix + 'wt')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
@@ -27,10 +26,10 @@ client.on('message', message => {
   if (message.content.startsWith(adminprefix + 'st')) {
     client.user.setGame(argresult, "https://www.twitch.tv/Sniper");
   message.delete();
-  }
-  if (message.content.startsWith(adminprefix + 'nm')) {
-  client.user.setUsername(argresult).then
-      message.channel.send(`Changing The Name To ..**${argresult}** `)
+  } else
+if (message.content.startsWith(adminprefix + 'nm')) {
+client.user.setUsername(argresult).then
+    message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
 if (message.content.startsWith(adminprefix + 'avt')) {
   client.user.setAvatar(argresult);
@@ -39,5 +38,4 @@ if (message.content.startsWith(adminprefix + 'avt')) {
 });
 
 
-
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.T);
